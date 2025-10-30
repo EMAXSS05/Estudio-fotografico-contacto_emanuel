@@ -1,0 +1,208 @@
+
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    height: 10vh;
+    background-color: #030303;
+}
+
+main{
+    padding: 15px;
+    display: flex;
+    min-height: 90vh;
+    flex: 1;
+    background: linear-gradient(to bottom, #3a3837, #8b652e);
+}
+section{
+    margin-top: 5vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+}
+
+.titulo>h1{
+    margin-left: 10vh;
+    font-size: clamp(40px, 2vw, 60px);
+   /* font-size: 50px; /*60px*/
+}
+
+
+.caja_contacto{
+    display: flex;
+    flex-direction: column;
+   background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(50px);
+    margin-top: 12vh;
+}
+
+
+
+.direccion_wsp, .correo_ig {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+}
+
+h3{
+    color: #FF9950;
+}
+
+aside {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  width: 40%;
+}
+
+.dir-text, .ig-text{
+    padding-left: 20px;
+}
+
+.correo-text{
+    padding-left: 23px;
+}
+.wsp-text{
+    padding-left: 24px;
+}
+
+
+form{
+   width: 75%; /* puedes ajustar a gusto (50%–80%) */
+  height: 74%; /* <- controla la altura, más o menos grande 65*/ 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(50px);
+ 
+
+  padding: 20px 20px;
+  border-radius: 12px;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+label{
+    color: white;
+    font-size: 2vh;
+}
+textarea{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: white;
+    background-color: #282525;
+     border: solid 1px white;
+     border-radius: 10px;
+    
+}
+input{
+    color: rgb(255, 253, 248);
+    background-color: #282525 ;
+    border: solid 1px white;
+    padding: 7px;
+    border-radius: 10px;
+}
+button{
+    background-color: #FF9950;
+    border: solid 1px white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+h3>img{
+    vertical-align: middle;
+    width: 20px;
+   
+}
+
+
+footer{
+   
+    background-color: #030303;
+}
+button:hover {
+  background-color: #ffae70;
+}
+
+
+@media (max-width: 1024px) {
+    /* Ajustes para tabletas */
+    
+    .titulo > h1 {
+        /* Tamaño un poco más pequeño en tabletas */
+        font-size: clamp(25px, 4vw, 50px);
+        margin-left: 3vw;
+    }
+    
+    .caja_contacto {
+        margin-top: 5vh;
+    }
+
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para móviles */
+
+    body {
+        /* Desactivamos el truco de min-height para que la página fluya en móvil */
+        min-height: auto; 
+    }
+    
+    /* 1. Apilamos el contenido principal (Contacto y Formulario) */
+    main {
+        flex-direction: column; 
+        min-height: auto; /* Dejar que el contenido defina la altura */
+        padding: 10px;
+    }
+    
+    /* 2. Hacemos que la sección y el aside ocupen todo el ancho */
+    section, aside {
+        width: 100%;
+        margin-top: 0;
+        padding: 10px 0;
+    }
+    
+    /* 3. Ajustamos el Título */
+    .titulo > h1 {
+        margin-left: 0; /* Quitamos margen a la izquierda */
+        text-align: center;
+        font-size: clamp(20px, 8vw, 36px);
+    }
+    
+    /* 4. Hacemos la caja de contacto más pequeña y centrada */
+    .caja_contacto {
+        margin-top: 3vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    /* 5. Apilamos los pares de contacto */
+    .direccion_wsp, .correo_ig {
+        flex-direction: column; /* Apilamos Dirección/WhatsApp y Correo/Instagram */
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px; /* Espacio entre los bloques apilados */
+        padding: 15px 10%; /* Más espacio interno */
+    }
+    
+    /* 6. Formulario ocupa casi todo el ancho */
+    aside {
+        padding-bottom: 30px; /* Separación antes del footer */
+    }
+    form {
+        width: 90%; 
+        height: auto; 
+        padding: 15px;
+    }
+}
+
