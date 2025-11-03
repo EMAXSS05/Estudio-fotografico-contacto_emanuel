@@ -107,7 +107,7 @@ input{
     color: rgb(255, 253, 248);
     background-color: #282525 ;
     border: solid 1px white;
-    padding: 7px;
+    padding: 8px;
     border-radius: 10px;
 }
 button{
@@ -154,18 +154,18 @@ button:hover {
     /* Ajustes para móviles */
 
     body {
-        /* Desactivamos el truco de min-height para que la página fluya en móvil */
+       
         min-height: auto; 
     }
     
-    /* 1. Apilamos el contenido principal (Contacto y Formulario) */
+   
     main {
         flex-direction: column; 
-        min-height: auto; /* Dejar que el contenido defina la altura */
+        min-height: auto; 
         padding: 10px;
     }
     
-    /* 2. Hacemos que la sección y el aside ocupen todo el ancho */
+  
     section, aside {
         width: 100%;
         margin-top: 0;
